@@ -1,0 +1,121 @@
+<section class="fondo" id="fondo">
+  <div class="grid-container">
+    <div class="grid-item item1">
+      <h2 class="nombre">{{horario.nombre}}</h2>
+    </div>
+    <div class="grid-item item2">
+      <h3 class="centro">{{horario.centroDeTrabajo}}</h3>
+    </div>
+    <div class="grid-item item3">
+
+      <div class="table1">
+        <table>
+          <thead [ngSwitch]="horario.mesesTrabajo[0]">
+            <tr *ngSwitchCase="1"  class="mes">Enero</tr>
+            <tr *ngSwitchCase="2"  class="mes">Febrero</tr>
+            <tr *ngSwitchCase="3"  class="mes">Marzo</tr>
+            <tr *ngSwitchCase="4"  class="mes">Abril</tr>
+            <tr *ngSwitchCase="5"  class="mes">Mayo</tr>
+            <tr *ngSwitchCase="6"  class="mes">Junio</tr>
+            <tr *ngSwitchCase="7"  class="mes">Julio</tr>
+            <tr *ngSwitchCase="8"  class="mes">Agosto</tr>
+            <tr *ngSwitchCase="9"  class="mes">Septiembre</tr>
+            <tr *ngSwitchCase="10"  class="mes">Octubre</tr>
+            <tr *ngSwitchCase="11"  class="mes">Noviembre</tr>
+            <tr *ngSwitchCase="12"  class="mes">Diciembre</tr>
+            <tr *ngSwitchDefault  class="mes"></tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of horarioCompleto">
+              <td class="celda" >
+                {{item[0]}}
+              </td>
+              <td class="celda1">
+               {{item[1]}}
+              </td >
+              <td class="celda1">
+                {{item[2]}}
+              </td>
+              <td class="firma" >
+                {{horario.nombre}}
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table2">
+        <table>
+          <thead [ngSwitch]="horario.mesesTrabajo[1]">
+            <tr *ngSwitchCase="1"  class="mes">Enero</tr>
+            <tr *ngSwitchCase="2"  class="mes">Febrero</tr>
+            <tr *ngSwitchCase="3"  class="mes">Marzo</tr>
+            <tr *ngSwitchCase="4"  class="mes">Abril</tr>
+            <tr *ngSwitchCase="5"  class="mes">Mayo</tr>
+            <tr *ngSwitchCase="6"  class="mes">Junio</tr>
+            <tr *ngSwitchCase="7"  class="mes">Julio</tr>
+            <tr *ngSwitchCase="8"  class="mes">Agosto</tr>
+            <tr *ngSwitchCase="9"  class="mes">Septiembre</tr>
+            <tr *ngSwitchCase="10"  class="mes">Octubre</tr>
+            <tr *ngSwitchCase="11"  class="mes">Noviembre</tr>
+            <tr *ngSwitchCase="12"  class="mes">Diciembre</tr>
+            <tr *ngSwitchDefault  class="mes"></tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of horarioCompleto1">
+              <td class="celda" >
+                {{item[0]}}
+              </td>
+              <td class="celda1">
+               {{item[1]}}
+              </td >
+              <td class="celda1">
+                {{item[2]}}
+              </td>
+              <td class="firma" >
+                {{horario.nombre}}
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table3">
+        <table>
+          <thead [ngSwitch]="horario.mesesTrabajo[2]">
+            <tr *ngSwitchCase="1"  class="mes">Enero</tr>
+            <tr *ngSwitchCase="2"  class="mes">Febrero</tr>
+            <tr *ngSwitchCase="3"  class="mes">Marzo</tr>
+            <tr *ngSwitchCase="4"  class="mes">Abril</tr>
+            <tr *ngSwitchCase="5"  class="mes">Mayo</tr>
+            <tr *ngSwitchCase="6"  class="mes">Junio</tr>
+            <tr *ngSwitchCase="7"  class="mes">Julio</tr>
+            <tr *ngSwitchCase="8"  class="mes">Agosto</tr>
+            <tr *ngSwitchCase="9"  class="mes">Septiembre</tr>
+            <tr *ngSwitchCase="10"  class="mes">Octubre</tr>
+            <tr *ngSwitchCase="11"  class="mes">Noviembre</tr>
+            <tr *ngSwitchCase="12"  class="mes">Diciembre</tr>
+            <tr *ngSwitchDefault  class="mes"></tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of horarioCompleto2">
+              <td class="celda" >
+                {{item[0]}}
+              </td>
+              <td class="celda1">
+               {{item[1]}}
+              </td >
+              <td class="celda1">
+                {{item[2]}}
+              </td>
+              <td class="firma" >
+                {{horario.nombre}}
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</div>
+  </div>
+</section>

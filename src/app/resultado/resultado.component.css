@@ -1,0 +1,76 @@
+.fondo{
+  background: url("/assets/img/plantilla.png") no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  width:1754px;
+
+  height: 1240px;
+    font-family: "Brush Script MT";
+    font-size: 20px;
+
+}
+.firma{
+  text-decoration-line: underline line-through;
+
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: "item1" "item2 " "item3 " ;
+}
+.item1{
+  display: flex;
+  align-items: unset;
+  grid-area: item1;
+  padding-top: 2px;
+  margin: 2.6em 0 0 22em ;
+
+}
+.item2{
+  display: flex;
+  justify-items: unset;
+  grid-area: item2;
+  margin: 0.7em 0 0 31.5em ;
+}
+.item3{
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  margin-left: 4.5em;
+  grid-area: item3;
+  height: 500px;
+  width: 100%;
+}
+
+.nombre{
+  display: block;
+  margin: 0.1em 0;
+}
+.celda{
+  width: 135px;
+  height: 33px;
+}
+.celda1{
+
+  text-align: center;
+  width: 98px;
+  height: 33px;
+}
+.firma{
+  text-align: start;
+  width: 171px;
+  height: 33px;
+}
+.mes{
+  height: 35px;
+}
+
+.table2{
+
+  margin-left: 18px;
+}
+.table3{
+
+  margin-left: 18px;
+}
+
+

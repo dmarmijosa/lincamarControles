@@ -1,0 +1,105 @@
+<nav class="navbar" style="background-color: #e3f2fd;">
+  <section class="container-fluid">
+    <h3>Controles de asistencia</h3>
+  </section>
+</nav>
+
+<section class="container col" id="Formulario">
+
+
+  <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="guardar()">
+    <section class="mb-3">
+      <label for="nombre" class="form-label">Nombres y Apellidos</label>
+      <input formControlName="nombre" type="email" class="form-control" id="nombre" aria-describedby="emailHelp">
+      <section class="alert alert-danger" role="alert" *ngIf="campoValido('nombre')">
+        El campo nombre es requerido y debe ser válido.
+      </section>
+    </section>
+    <section class="mb-3">
+      <label for="centro" class="form-label">Centro de trabajo:</label>
+      <input formControlName="centroDeTrabajo" type="text" class="form-control" id="centro">
+      <section class="alert alert-danger" role="alert" *ngIf="campoValido('nombre')">
+        El campo centro de trabajo es requerido y debe ser válido.
+      </section>
+    </section>
+    <div formArrayName="mesesTrabajo">
+
+      <section class="mb-3" *ngFor="let item of mesesARR.controls; let i = index"  >
+        <select [formControlName]="i" class="form-select mb-3" aria-label="Default select example">
+          <option selected [value]="null">Seleccion el {{i+1}}er mes de trabajo </option>
+          <option *ngFor="let mes of meses;let i=index" [ngValue]="i+1" >{{mes}}</option>
+
+        </select>
+      </section>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Día</th>
+          <th scope="col">Hora Ingreso</th>
+          <th scope="col">Hora Salida</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr formArrayName="lunes">
+          <th scope="row">Lunes</th>
+          <td *ngFor="let item of lunesARR.controls;let i = index">
+            <input class="form-control" type="time" [formControlName]="i">
+          </td>
+        </tr>
+        <tr formArrayName="martes">
+          <th scope="row">Martes</th>
+          <td *ngFor="let item of martesARR.controls;let i = index">
+            <input class="form-control" type="time" [formControlName]="i">
+          </td>
+        </tr>
+        <tr formArrayName="miercoles">
+          <th scope="row">Miercoles</th>
+          <td *ngFor="let item of miercolesARR.controls;let i = index">
+            <input class="form-control" type="time" [formControlName]="i">
+          </td>
+        </tr>
+        <tr formArrayName="jueves">
+          <th scope="row">Jueves</th>
+          <td *ngFor="let item of juevesARR.controls;let i = index">
+            <input class="form-control" type="time" [formControlName]="i">
+          </td>
+        </tr>
+        <tr formArrayName="viernes">
+          <th scope="row">Viernes</th>
+          <td *ngFor="let item of viernesARR.controls;let i = index">
+            <input class="form-control" type="time" [formControlName]="i">
+          </td>
+        </tr>
+        <tr formArrayName="sabado">
+          <th scope="row">Sabado</th>
+          <td *ngFor="let item of sabadoARR.controls;let i = index">
+            <input class="form-control" type="time" [formControlName]="i">
+          </td>
+        </tr>
+        <tr formArrayName="domingo">
+          <th scope="row">Domingo</th>
+          <td *ngFor="let item of domingoARR.controls;let i = index">
+            <input class="form-control" type="time" [formControlName]="i">
+          </td>
+        </tr>
+
+
+      </tbody>
+    </table>
+
+
+
+    <button type="submit" class="btn btn-primary">Crear reporte</button>
+  </form>
+
+  <span>Formulario</span>
+  <pre>{{miFormulario.value | json}}</pre>
+  <span>Formulario</span>
+  <pre>{{this.miFormulario.controls['nombre'].errors && this.miFormulario.controls['nombre'].touched}}</pre>
+  <span>Formulario</span>
+
+
+
+</section>
